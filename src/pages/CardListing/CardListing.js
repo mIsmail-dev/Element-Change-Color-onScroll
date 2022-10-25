@@ -5,22 +5,16 @@ import './CardListing.scss'
 const CardListing = () => {
   const [colors, setColors] = useState(['red', 'blue', 'green'])
 
-  // console.log('rendered: ', colors)
   const shiftOne = (arr) => {
-    // console.log('arr: ', arr)
-    let res = arr[0] // Store the first element & then remove it from the array. After removing it, push it to the end of the array
+    let res = arr[0]
     if (arr.length > 0) arr.splice(0, 1)
     arr.push(res)
-    // console.log('res: ', arr)
     return arr
   }
 
   const listenScrollEvent = (e) => {
-    console.log('Scrolled: ', window.scrollY)
     console.log()
     if (window.scrollY % 100 === 0 && window.scrollY !== 0) {
-      // console.log('Called', window.scrollY)
-      // console.log('colors before: ', colors)
       let result = shiftOne(colors)
       setColors([...result])
     }
