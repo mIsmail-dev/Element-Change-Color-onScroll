@@ -1,12 +1,17 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
+import './cardOrder.scss'
 
-const CardOrder = ({ colors }) => {
+const CardOrder = () => {
+  const { state } = useLocation()
+  const { colors } = state // Read values passed on state
+  console.log('colors: ', colors)
   return (
-    <div>
+    <ul>
       {colors.map((color) => (
-        <h1 key={color}>{color}</h1>
+        <li key={color}>{color}</li>
       ))}
-    </div>
+    </ul>
   )
 }
 
