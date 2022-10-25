@@ -24,12 +24,11 @@ const CardListing = () => {
   useEffect(() => {
     window.addEventListener('scroll', listenScrollEvent)
 
-    // return () => window.removeEventListener('scroll', listenScrollEvent)
+    return () => window.removeEventListener('scroll', listenScrollEvent)
     // eslint-disable-next-line
   }, [])
 
   const onClick = () => {
-    console.log('Clicked.', colors)
     navigate('/card-order', { state: { colors: colors } })
   }
 

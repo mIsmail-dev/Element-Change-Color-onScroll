@@ -4,8 +4,7 @@ import './cardOrder.scss'
 
 const CardOrder = () => {
   const { state } = useLocation()
-  const { colors } = state // Read values passed on state
-  console.log('colors: ', colors)
+  const { colors } = state
   return (
     <ul>
       {colors.map((color) => (
