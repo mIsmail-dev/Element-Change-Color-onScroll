@@ -15,7 +15,7 @@ const CardListing = () => {
   }
 
   const listenScrollEvent = (e) => {
-    if (window.scrollY % 100 === 0 && window.scrollY !== 0) {
+    if (window.scrollY >= 120 && window.scrollY !== 0) {
       let result = shiftOne(colors)
       setColors([...result])
     }

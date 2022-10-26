@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import './cardOrder.scss'
+import styles from './CardOrder.module.scss'
 
 const CardOrder = () => {
   const { state } = useLocation()
@@ -8,7 +8,9 @@ const CardOrder = () => {
   return (
     <ul>
       {colors.map((color) => (
-        <li key={color}>{color}</li>
+        <li className={styles.liContainer} key={color}>
+          {color}
+        </li>
       ))}
     </ul>
   )
